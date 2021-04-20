@@ -1,0 +1,183 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+Create a Customer table to hold the following data:
+
+- Customer Number (numbers only, with a maximum length of 8)
+- The Item Ordered, the date of the order, and the price of the order
+- The Customer's Social security number (so that the dashes will fit in the column e.g 111-22-4444)
+- The Customer's name (think about this, don't use one column!)
+- The Customer's Address (this about this one too)
+
+Be sure to assign the NULL status for each column as you think would be appropriate.
+
+The Primary Key of the table is the CustomerNo
+
+ 
+
+YOUR ANSWER HERE:
+
+CREATE TABLE customer (
+    customer_no INT(8) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    item_no INT NOT NULL,
+    order_date DATE NOT NULL,
+    order_price INT NOT NULL,
+    order_no INT NOT NULL UNIQUE,
+    customer_ssn VARCHAR(11) NULL,
+    customer_firstname TEXT NOT NULL,
+    customer_middlename TEXT NULL,
+    customer_lastname TEXT NOT NULL,
+    customer_suffix TEXT NULL,
+    customer_address TEXT NOT NULL,
+    customer_address2 TEXT NULL,
+    customer_city TEXT NOT NULL,
+    customer_state VARCHAR(2) NOT NULL,
+    customer_zipcode VARCHAR(10) NOT NULL
+);
+
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Alter the Customer lastname column in the following table to change the lastname column have a maximum size of 50.
+
+CREATE TABLE people
+(
+
+SSN varchar(11) Primary Key,
+LastName varchar(40) not null,
+FirstName varchar(40),
+Position varchar(40)
+
+);
+
+ 
+
+Do NOT use a CREATE TABLE statement here! Change the column definition without recreating the entire table.
+
+ 
+
+YOUR ANSWER HERE:
+
+ALTER TABLE people
+ALTER COLUMN LastName VARCHAR(50);
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Create an appropriate index on the Social Security Number (SSN) in the following table...
+
+
+CREATE TABLE people
+(
+
+People_ID numeric (11) Primary Key,
+SSN varchar(11),
+LastName varchar(40) not null,
+FirstName varchar(40),
+Position varchar(40)
+
+);
+
+NOTE: The Social Security Number should never have a duplicate value in the table.
+
+ 
+
+YOUR ANSWER HERE:
+
+-- create index of SSN
+CREATE INDEX idx_snn
+ON people (ssn);
+
+-- update SSN column to be unique
+ALTER TABLE people
+ALTER COLUMN ssn UNIQUE;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 4. 
+
+Code a SQL statement to properly add "BooksRUs" as a publisher to the database.
+
+Use the following data...
+
+publisher ID: is 7
+
+address: "456 Publisher Lane, St. Louis, MO "
+
+
+IMPORTANT: Your statement must list the specific column names for any values being added!
+
+ 
+
+YOUR ANSWER HERE:
+
+INSERT INTO publisher (pub_id, name, address, city, state)
+  VALUES (7, 'BooksRUs', '456 Publisher Lane', 'St. Louis', 'MO');
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 5. 
+
+Code a SQL statement to change the type to "geeky" for any book that has the word "Computer" or "Networking" in the title.
+
+ 
+
+YOUR ANSWER HERE:
+
+UPDATE book SET type = 'geeky'
+WHERE title LIKE '%Computer%' OR title LIKE '%Networking%';
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 6. 
+
+Code a SQL statement to remove the all authors that live in Utah.
+
+ 
+
+YOUR ANSWER HERE:
+
+DELETE FROM author
+WHERE state = 'UT';
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
