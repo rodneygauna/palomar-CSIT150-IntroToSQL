@@ -1,0 +1,2 @@
+ALTER TABLE people
+ALTER COLUMN LastName VARCHAR(50);
