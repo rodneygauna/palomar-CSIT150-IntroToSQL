@@ -1,0 +1,68 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+Code a SQL statement to display the book's title and price where the word 'computer' or 'silicon' is found somewhere inside the title. Display the title in all uppercase letters.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT UPPER(title) AS Title, price AS Price
+FROM book
+WHERE title LIKE "%computer%" OR title LIKE "%silicon%";
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SQL statement to INSERT a new row into the book table but use a date function that uses a published date value
+that is exactly in the format shown below.
+
+April 1, 2014
+
+Specify that exact date, don't change it to something else.
+
+Do NOT change the format of "April 1, 2014" manually, use a SQL date function to get this properly loaded into the row being inserted.
+
+For any other values you may need for the INSERT, that I have not provided, you may provide yourself. Remember, all columns that were specified as NOT NULL when the table was created are required to have values in order to be added into the database.
+
+ 
+
+YOUR ANSWER HERE:
+
+INSERT INTO book (isbn, title, type, pub_id, price, pubdate)
+VALUES ("9781593279929", "Automate the Boring Stuff with Python, 2nd Edition", "computer", 3, 39.95, STR_TO_DATE("April 1, 2014", "%M %d, %Y"));
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Code a SQL statement to list the title and published date value for all the rows in the table. Display the date in the following format: 04/01/14
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, DATE_FORMAT(pubdate, "%m/%d/%y") AS pubdate
+FROM book;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------

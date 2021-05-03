@@ -1,0 +1,105 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+A company, XYZ, Inc., has analyzed the data attributes that they want to track in their database.
+
+They used the data attributes below to answer to develop an ER diagram...
+
+
+Data attributes for the XYZ Inc.
+---------------------------------
+
+Department name
+Job Title
+Social security numbers (SSN) for their employees
+Employee name, address and phone number
+Employee department number and job code
+Salary for employee
+Job Description for employee
+
+
+Here is a simple Entity-Relationship diagram that models this data...
+
+
+DEPARTMENT ---< Employee >--- Job
+
+ 
+
+QUESTION:
+
+Describe the relationship shown between the Department and Employee.
+
+Describe the relationship shown between the Employee and Job.
+
+(Use words, there is no SQL needed)
+
+ 
+
+YOUR ANSWER HERE:
+
+ Department and Employee Relationship:
+The relationship between Department to Employee is a one-to-many; meaning an employee can only be assigned to one department / a department can be assigned to multiple employees.
+
+ Employee and Job Relationship:
+The relationship between Employee to Job is many-to-one; meaning multiple employees can have the same job but a single employee can only have one job assigned to them.
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+A company, XYZ, Inc., has analyzed the data attributes that they want to track in their database.
+
+They used the data attributes below and applied the Normalization Guidelines to develop a data model using Relational Notation format.
+
+ 
+
+Data attributes for the XYZ Inc.
+---------------------------------
+
+Department name
+Job Title
+Social security numbers (SSN) for their employees
+Employee name, address and phone number
+Employee department number and job code
+Salary for employee
+Job Description for employee
+
+
+Here is a simple Relational Notation diagram that models this data...
+
+EMPLOYEE(emp_id-PK, firstname, lastname, address,
+city, state, zip, phone, salary, deptnum-FK, jobcode-FK)
+
+DEPARTMENT(deptnum-PK, name)
+
+JOB(jobcode-PK, title, description)
+
+
+QUESTION:
+
+What is the purpose of the "deptnum- FK" (Foriegn Key) in the EMPLOYEE table? What relationship between entities does it enforce?
+
+(Use words, there is no SQL needed)
+
+ 
+
+YOUR ANSWER HERE:
+
+ The "deptnum-FK" means it's using the DEPARTMENT.deptnum field/id so that its unique ID is related to the EMPLOYEE entry.
+ This forces a one-to-many relationship between the DEPARTMENT and the EMPLOYEE.
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+INSERT INTO book (isbn, title, type, pub_id, price, pubdate)
+  VALUES ("9781593279929", "Automate the Boring Stuff with Python, 2nd Edition", "computer", 3, 39.95, STR_TO_DATE("April 1, 2014", "%M %d, %Y"));

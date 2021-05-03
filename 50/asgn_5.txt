@@ -1,0 +1,55 @@
+---------------------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS
+Be sure to test any SQL statements in the SQL Practice Area BEFORE submitting them below!
+Never tailor your answer to the data in the tables!! In the real world, data changes all the time.
+Use the information I give you in the problem to code your SQL statements.
+Unless otherwise stated, enter a single SQL statement in the box below.
+Do NOT enter the data results of running your SQL statement. I will run your statement on my end to see the data results.
+ 
+
+Problem 1. 
+
+Code a SELECT statement that shows the average advance, the total number books sold, and the number of books being published by Sunshine Publishers and All Techo Books.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT AVG(b.advance), SUM(b.ytd_sales), SUM(b.isbn)
+FROM book b
+JOIN publisher p ON b.pub_id = p.pub_id
+WHERE p.name = "Sunshine Publishers" OR p.name="All Techo Books";
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Show all the editors in "Lastname, Firstname" format (e.g. "Perry, Steve") and display them in one column. 
+
+Make the column heading display "Editor Names" (quotes not included)
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT CONCAT(lastname, ", ", firstname) AS "Editor Names"
+FROM editor;
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

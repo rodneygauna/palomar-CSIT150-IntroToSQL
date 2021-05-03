@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS
+Be sure to test any SQL statements in the SQL Practice Area BEFORE submitting them below!
+Never tailor your answer to the data in the tables!! In the real world, data changes all the time.
+Use the information I give you in the problem to code your SQL statements.
+Unless otherwise stated, enter a single SQL statement in the box below.
+Do NOT enter the data results of running your SQL statement. I will run your statement on my end to see the data results.
+ 
+
+Problem 1. 
+
+Code a SELECT statement that shows all books and the authors who have written them, but only show this for the authors that are from California.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT b.title AS "Book Title", CONCAT(a.lastname, ", ", a.firstname) AS "Author's Name", a.state AS "Author's State"
+FROM book b
+JOIN bookauthor ba USING (isbn)
+JOIN author a ON ba.author_id = a.author_id
+WHERE a.state = "CA"
+ORDER BY a.lastname, a.firstname, b.title;
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SELECT statement that will show the author's SSN for all authors who live in a city and state that is the same as where one of the publishers is based.
+
+ 
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT p.name AS "Publisher's Name", CONCAT(p.city, ", ", p.state) AS "Publisher City, State",  CONCAT(a.firstname, ", ", a.lastname) AS "Author's Name", a.ssn AS "Author's SSN", CONCAT(a.city, ", ", a.state) AS "Author's City and State"
+FROM publisher p
+LEFT JOIN author a ON p.state = a.state
+WHERE p.city = a.city
+ORDER BY p.name, a.lastname, a.firstname;
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

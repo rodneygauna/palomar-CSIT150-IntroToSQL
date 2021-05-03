@@ -1,0 +1,81 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+Note: There are authors in the AUTHOR table that have yet to be assigned a book to write.
+
+Code a SELECT statement that shows all authors in the AUTHOR table whether or not they have written a book.
+
+If they have written a book, then show the ISBN number for each book they have written. Do NOT show the book title and DO NOT join to the BOOK table.
+
+Sort in author name order, starting with the last name.
+
+ 
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT firstname, lastname, isbn
+FROM author
+LEFT OUTER JOIN bookauthor USING (author_id)
+ORDER BY 2, 1;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SELECT statement that shows all editors who have salary between $50,000 and $100,000. Use the BETWEEN operator in your answer. List their position as well.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT firstname, lastname, salary, editor_position
+FROM editor
+WHERE salary BETWEEN 50000 AND 100000
+ORDER BY 3, 2, 1;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Code a SELECT statement that will show the titles of all books that have the word "stressed" in them, regardless of capitalization.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title
+FROM book
+WHERE title LIKE "%stressed%";
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------

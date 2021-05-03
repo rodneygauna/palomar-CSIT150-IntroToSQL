@@ -1,0 +1,81 @@
+---------------------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS
+Be sure to test any SQL statements in the SQL Practice Area BEFORE submitting them below!
+Never tailor your answer to the data in the tables!! In the real world, data changes all the time.
+Use the information I give you in the problem to code your SQL statements.
+Unless otherwise stated, enter a single SQL statement in the box below.
+Do NOT enter the data results of running your SQL statement. I will run your statement on my end to see the data results.
+ 
+
+Problem 1. 
+
+Code a SELECT statement that shows book titles, the price, and the advance paid but only show books that have been given an advance of 10000 or more or whose price is greater than $30.
+
+If the price is NULL show that as well. Sort in book title order
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, price, advance
+FROM book
+WHERE price >= 10000 OR price >= 30 OR price IS NULL
+ORDER BY title;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SELECT statement that shows all authors that who live in Oakland, California.
+
+Also show any author with the last name of Singer no matter where they live.
+
+Sort the results in author order by lastname, then firstname.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT firstname, lastname, city, state
+FROM author
+WHERE city = 'Oakland' AND state = 'CA' OR lastname = 'Singer'
+ORDER BY lastname, firstname;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Code a SELECT statement that shows all books that have yet to set a publication date.
+
+Include the title and isbn number in the SELECT list as well as the publication date.
+
+Sort in title order.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, isbn, pubdate
+FROM book
+WHERE pubdate IS NULL
+ORDER BY title;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

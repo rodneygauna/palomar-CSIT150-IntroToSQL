@@ -1,0 +1,87 @@
+---------------------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS
+Be sure to test any SQL statements in the SQL Practice Area BEFORE submitting them below!
+Never tailor your answer to the data in the tables!! In the real world, data changes all the time.
+Use the information I give you in the problem to code your SQL statements.
+Unless otherwise stated, enter a single SQL statement in the box below.
+Do NOT enter the data results of running your SQL statement. I will run your statement on my end to see the data results.
+ 
+
+Problem 1. 
+
+Code a SQL statement that displays all of the books showing their title, price, and publication date.
+
+Also list the revenue that has been made on each book and give that column a heading of "Revenue".
+
+Only show books who have been given an advance of more than zero. Put the results in book title order.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, price, pubdate, price * ytd_sales "Revenue"
+FROM book
+WHERE advance > 0
+ORDER BY title;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SQL statement that lists the Publisher name and city that they are based in.
+
+The data results should appear in the following format:
+
+Publisher (publisher name) is in (publisher city)"
+
+NOTE: Substitute the information between ()'s with actual column names!
+
+ 
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT 'Publisher ', name, ' is in ', city
+FROM publisher;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Code a SQL statement that lists the books that have been advanced less than $15,000
+
+Sort the results by title in descending order
+
+Never use the * in your assignment answers to  list all columns!   [ This is true for the rest of the class ]
+
+Always list the column names that are needed to provide the information the quiz asks for. You may also list columns used in the WHERE clause.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, advance
+FROM book
+WHERE advance < 15000
+ORDER BY title DESC;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

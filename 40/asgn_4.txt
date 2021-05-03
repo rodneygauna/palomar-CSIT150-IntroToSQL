@@ -1,0 +1,56 @@
+---------------------------------------------------------------------------------------------------------------
+
+INSTRUCTIONS
+Be sure to test any SQL statements in the SQL Practice Area BEFORE submitting them below!
+Never tailor your answer to the data in the tables!! In the real world, data changes all the time.
+Use the information I give you in the problem to code your SQL statements.
+Unless otherwise stated, enter a single SQL statement in the box below.
+Do NOT enter the data results of running your SQL statement. I will run your statement on my end to see the data results.
+ 
+
+Problem 1. 
+
+Code a SELECT statement that shows all book titles published by Sunshine Publishers and All Techo Books but only for books that have sold more than 5000 books.
+
+Sort results in publisher name order and in title order within each publisher.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT title, ytd_sales, name
+FROM book JOIN publisher USING (pub_id)
+WHERE name = "All Techo Books" OR name = "Sunshine Publishers" AND ytd_sales > 5000
+ORDER BY name, title;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a SELECT statement that shows all authors who live in Oakland, California and are based in the same state as one of the publishers.
+
+The SELECT list should display the following: The publisher's name and city, the author's name, city, and state.
+
+Sort columns in the same order shown in the SELECT list.
+
+ 
+
+YOUR ANSWER HERE:
+
+SELECT author.firstname, author.lastname, author.city, author.state, publisher.name, publisher.city
+FROM author JOIN publisher USING (state)
+WHERE author.city = "Oakland"
+ORDER BY publisher.name, publisher.city, author.firstname, author.lastname, author.city, author.state;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

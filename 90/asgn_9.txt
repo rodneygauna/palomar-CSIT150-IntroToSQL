@@ -1,0 +1,83 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+Code a subquery SELECT statement that lists each publisher and all their books that have been given an advance that is less than average.
+
+
+NOTE: It is OK to use a JOIN in the same statement where you use a subquery.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+
+SELECT DISTINCT p.name, b.title, b.advance
+
+FROM publisher p
+
+JOIN book b USING (pub_id)
+
+JOIN bookauthor ba USING (isbn)
+
+WHERE b.advance < (
+
+ SELECT AVG(advance)
+
+ FROM book
+
+)
+
+ORDER BY 1, 2, 3
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Code a subquery SELECT statement that lists all authors who live in a state where "All Techo Books" is based.
+
+
+NOTE: If more than one table is referenced in a SELECT statement, the tables must be properly joined. Any SELECT statement submitted with an incorrect join will lose a minimum of 1 point.
+
+ 
+
+YOUR ANSWER HERE:
+
+
+SELECT firstname, lastname, state
+
+FROM author
+
+WHERE state IN (
+
+ SELECT state
+
+ FROM publisher
+
+ WHERE name = "All Techo Books"
+
+)
+
+ORDER BY 2, 1
+
+ 
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,58 @@
+---------------------------------------------------------------------------------------------------------------
+
+NOTE:   There is NO SQL needed for these answers!  Just write out sentences, in English, that answers the question
+
+ 
+
+Problem 1. 
+
+What is an Entity?
+
+ 
+
+YOUR ANSWER HERE:
+
+An entity is a single occurrence (or row) in a table.
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+What is a Primary Key?
+
+ 
+
+YOUR ANSWER HERE:
+
+A primary key is a unique identifier for an entity in a table (can be auto-incrementing depending on how the data is added/inserted). In my experience, the table's "ID" column is used as the PK.
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+What does a NULL value represent?
+
+ 
+
+YOUR ANSWER HERE:
+
+NULL means that an entry does not exist (response example: null); which is different than a blank entry (can be an empty string, response example: "").
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
