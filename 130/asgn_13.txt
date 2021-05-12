@@ -1,0 +1,77 @@
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 1. 
+
+Code a single SQL statement that combines the results of two SELECT statements.
+
+The first SELECT statement returns the last name, first name, phone number, and the text expression 'author' for all authors who have a phone number prefix that is equal to '826'.
+
+The second SELECT statement returns the last name, first name, phone number, and the text expression 'editor' for all editors who have a phone number prefix that is equal to '826'.
+
+Sort all the results in descending order by last name and first name.
+
+
+IMPORTANT: Do NOT use the pattern matching characters, '%' and '_' in your answer! Use a String function you learned about in the lesson on Single-Row Functions.
+
+PHONE NUMBER PREFIX: Using '805 326-1234' as an example phone number, the '326' part of it is the PREFIX.
+
+ 
+
+YOUR ANSWER HERE:
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+NOTE: For this QUIZ you need to code TWO SQL Statements!
+
+1. Use the following SELECT statement below to create (or replace) a VIEW named authors_and_books.
+
+SELECT lastname, firstname, title
+FROM book JOIN bookauthor USING(isbn)
+JOIN author USING(author_id);
+
+Create new VIEW column names to use instead of lastname, firstname, and title.
+
+
+2. Now code a SELECT statement using the authors_and_books VIEW to show the book title and the authors last name and first name in book title order.
+
+ 
+
+YOUR ANSWER HERE:
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Create a View to show all the editors and the books they are assigned to. The View should only contain columns for the editor's last name and first name, phone number and editor position and the book title. Sort in last name, first name order.
+
+ 
+
+YOUR ANSWER HERE:
+
+ 
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
