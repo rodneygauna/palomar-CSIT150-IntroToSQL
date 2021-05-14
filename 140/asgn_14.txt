@@ -1,0 +1,74 @@
+---------------------------------------------------------------------------------------------------------------
+INSTRUCTIONS
+
+ 
+
+Problem 1. 
+
+What does it mean for a database to have Referential Integrity?
+
+ 
+
+YOUR ANSWER HERE:
+
+ It refers to the database having consistent relationships; so that relationships between tables have the correct FK and PK values.
+
+ This could be achieved by ensuring the schema of the tables requires those elements (ensuring it's not nullable as an example).
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 2. 
+
+Which SQL statements are used to save or undo your changes to the database since your last save and how do you use them?
+
+ 
+
+YOUR ANSWER HERE:
+
+ COMMIT stores the changes performed by a transaction.
+ ROLLBACK reverts changes performed by a transaction.
+
+ Example of a commit:
+ DELETE from books WHERE isbn = '12345';
+ COMMIT;
+
+ Example of a rollback:
+ DELETE from books WHERE isbn = '12345';
+ COMMIT;
+ ROLLBACK;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
+
+ 
+
+Problem 3. 
+
+Which SQL statement is used to give users access to tables/columns in the database and which statement is used to take away access to table/columns in the database and how do you use them?
+
+ 
+
+YOUR ANSWER HERE:
+ 
+ GRANT gives access to a user or group of users access to tables/columns.
+ REVOKE takes granted privileges away from a user or group of users to tables/columns.
+
+ Example of grant:
+ GRANT SELECT, INSERT, DELETE, UPDATE ON authors TO rodney;
+
+ Example of revoke:
+ REVOKE DELETE on authors TO rodney;
+
+ 
+
+ 
+
+---------------------------------------------------------------------------------------------------------------
